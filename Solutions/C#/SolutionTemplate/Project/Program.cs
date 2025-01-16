@@ -8,8 +8,8 @@ namespace Project
         static void Main(string[] args)
         {
             FoodItems foodItems = new([.. System.IO.File.ReadAllLines("../../../../dataset.csv")]);
-            var overallStats = foodItems.GetOverallStats();
-            Console.WriteLine($"Overall: Total: {overallStats.totalPrice:F2}, Min: {overallStats.minPrice:F2}, Max: {overallStats.maxPrice:F2}, Avg: {overallStats.averagePrice:F2}");
+            var (totalPrice, minPrice, maxPrice, averagePrice) = foodItems.GetOverallStats();
+            Console.WriteLine($"Overall: Total: {totalPrice:F2}, Min: {minPrice:F2}, Max: {maxPrice:F2}, Avg: {averagePrice:F2}");
             var categoryStats = foodItems.GetCategoryStats();
             foreach (var category in categoryStats)
             {

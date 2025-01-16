@@ -39,4 +39,14 @@ public class FoodItemTest
     {
         Assert.Throws<ArgumentException>(() => new FoodItem("1,category,subCategory,10.0,timestamp"));
     }
+
+    [Test]
+    public void CorrectCsvEntryShouldSuccessfullyParse() {
+        FoodItem foodItem = new("1,category,subCategory,10.0,2021-01-01");
+        Assert.That(foodItem.Id, Is.EqualTo(1));
+        Assert.That(foodItem.Category, Is.EqualTo("category"));
+        Assert.That(foodItem.SubCategory, Is.EqualTo("subCategory"));
+        Assert.That(foodItem.Price, Is.EqualTo(10.0));
+        Assert.That(foodItem.Timestamp, Is.EqualTo(new DateTime(2021, 1, 1)));
+    }
 }
