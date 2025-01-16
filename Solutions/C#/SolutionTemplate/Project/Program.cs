@@ -7,7 +7,7 @@ namespace Project
     {
         static void Main(string[] args)
         {
-            FoodItems foodItems = new([.. System.IO.File.ReadAllLines("/home/jkriz/Repos/C3-Meetup/20250115-food-analytics-challenge/dataset.csv")]);
+            FoodItems foodItems = new([.. System.IO.File.ReadAllLines("../../../../dataset.csv")]);
             var overallStats = foodItems.GetOverallStats();
             Console.WriteLine($"Overall: Total: {overallStats.totalPrice:F2}, Min: {overallStats.minPrice:F2}, Max: {overallStats.maxPrice:F2}, Avg: {overallStats.averagePrice:F2}");
             var categoryStats = foodItems.GetCategoryStats();
