@@ -77,7 +77,7 @@ ID,Category,Subcategory,Value,Timestamp
 - Develop skills in visualizing data to derive insights.
 
 ## Example Completing Primary Goals:
-Your final solution should produce something that looks like this (most important part being the actual values).
+Your final solution should produce something that looks like this (most important part being the actual values. `NOTE:` A bug has been identified in my code since I used TypeScript to produce this which was a bit more forgiving on parsing the values and it included a row that should not have been. Thank you Chris B for pointing this out to me.).
 ```
 Overall: Total: 499999.09, Min: 1.00, Max: 99.99, Avg: 50.03
   Category: Fruit, Total: 103558.85, Min: 1.00, Max: 99.98, Avg: 51.24
